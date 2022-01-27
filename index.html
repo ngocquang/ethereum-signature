@@ -5,25 +5,15 @@
 		<title>Sign & Verify Messages on Ethereum | Ether.js</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        <meta name="google-site-verification" content="AG6FuqEfGNzgXavvr5Shf66n6glWm-ess0nCk6BEgCE" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5SHQ87HSY"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P5SHQ87HSY');
-        </script>
 	</head>
 	<body>
         <section>
             <div class="container">
                 <div class="blueBg">
-                    <div class="box sign">                        
+                    <div class="box sign">
                         <button class="signInBtn" onclick="App.toggleForm();">Sign Message</button>
                     </div>
-                    <div class="box">                        
+                    <div class="box">
                         <button class="signOutBtn" onclick="App.toggleForm();">Verify Message</button>
                     </div>
                 </div>
@@ -31,16 +21,16 @@
                     <div class="formBx connect">
                         <h2>Ethereum signature</h2></br></br>
                         <h2>please, connect with metamask.</h2>
-                        <div class="wrapper">                                                                              
+                        <div class="wrapper">
                             <button onclick="App.connect()"><img src="metamask.svg" alt="Metamask" class="metamask"> </button>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="formBx sign">
                         <form onsubmit="App.sign(event)" class="message">
                             <h2>Ethereum Signature</h2>
-                            <label>Message</label>                            
-                            <textarea class="message" placeholder="This message proves you own the address from your connected Metamask account. &#10;&#10;For example, &quot;I am Felipe and this is my address. &quot; " required></textarea>                          
-                            <div class="btnWrapper">                                
+                            <label>Message</label>
+                            <textarea class="message" placeholder="This message proves you own the address from your connected Metamask account. &#10;&#10;For example, &quot;I am Felipe and this is my address. &quot; " required></textarea>
+                            <div class="btnWrapper">
                                 <input type="submit" value="Sign message">
                             </div>
                         </form>
@@ -49,30 +39,30 @@
                         <form class="signedFields">
                             <label>Signer Address</label>
                             <input type="text" class="address" readonly>
-                            <label>Signature Hash</label>                            
-                            <textarea class="rawSignature"  placeholder="Message Signature Hash" readonly></textarea>                                                       
-                         
+                            <label>Signature Hash</label>
+                            <textarea class="rawSignature"  placeholder="Message Signature Hash" readonly></textarea>
+
                         </form>
-                    </div>  
+                    </div>
                     <div class="formBx verify">
                         <form onsubmit="App.verify(event)">
                             <h2>Verify Ethereum Signed Message</h2>
                             <label>Signer Address</label>
                             <input type="text" class="address" placeholder="Address" required>
                             <label>Signature Hash</label>
-                            <textarea class="rawSignature"  placeholder="Message Signature Hash" required></textarea> 
+                            <textarea class="rawSignature"  placeholder="Message Signature Hash" required></textarea>
                             <label>Original Message</label>
-                            <textarea class="message"  placeholder="The original message that was signed" required></textarea>                                                        
-                            <div class="btnWrapper">                                
-                                <input type="submit" value="Verify Message">                                
-                            </div>                            
+                            <textarea class="message"  placeholder="The original message that was signed" required></textarea>
+                            <div class="btnWrapper">
+                                <input type="submit" value="Verify Message">
+                            </div>
                         </form>
                         <div id="verificationMessage">
                         </div>
-                    </div>  
+                    </div>
                 </div>
             </div>
-        </section>    
+        </section>
         <footer class="footer">
             <div class="container">
                 <span class="text-muted">Created by
@@ -80,10 +70,10 @@
                     <a href="https://github.com/fcmiranda/ethereum-signature" target="blank">GitHub</a> - Using
                     <a href="https://docs.ethers.io/v5" target="blank">Ethers.js v5</a> - Favicon made by
                     <a href="https://creativemarket.com/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-                </span>                    
+                </span>
             </div>
         </footer>
-        
+
         <script src="./date_fns.min.js" language="javascript"></script>
         <script src="./ethers-5.2.umd.min.js" language="javascript"></script>
         <script src="./sign.js" language="javascript"></script>
